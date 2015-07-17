@@ -61,3 +61,5 @@ ul {
     background: transparent url(images/ic_action_location.png);
     background-repeat: no-repeat;
 }
+
+#map { height: 180px; }

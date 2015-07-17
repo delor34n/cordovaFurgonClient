@@ -16,10 +16,19 @@
         StatusBar.backgroundColorByHexString('#ffffff');
         StatusBar.styleDefault();
         FastClick.attach(document.body);
-
-
+        initializeMap();
     }, false);
 
     /* ---------------------------------- Local Functions ---------------------------------- */
+    function initializeMap() {
+        var map = new L.Map('map');
+
+        var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+        var osmAttrib = 'Map data © OpenStreetMap contributors';
+        var osm = new L.TileLayer(osmUrl, { attribution: osmAttrib });
+
+        map.setView(new L.LatLng(43.069452, -89.411373), 11);
+        map.addLayer(osm);
+    }
 
 }());
