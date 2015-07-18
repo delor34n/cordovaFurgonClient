@@ -13,10 +13,7 @@
     router.addRoute('', function() {
         $('body').html(new HeaderView().render().$el);
         $('body').append(new FooterView().render().$el);
-
         $('body').append(new HomeView().render().$el);
-        $('a.active').removeClass('active');
-        $('span.icon-home').parent().addClass('active');
     });
 
     router.addRoute('home', function() {

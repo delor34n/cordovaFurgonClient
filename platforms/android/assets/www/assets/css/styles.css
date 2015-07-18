@@ -19,3 +19,27 @@ body {
     -ms-user-select: none;
     user-select: none;
 }
+
+.centered-box{
+	text-align: center;
+	margin-top: 20px;
+}
+
+#init-toggle{
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.toggle{
+	background-color: #B40404;
+}
+
+.toggle::before{
+	color:white;
+}
+
+#logo{
+	width: 50%;
+	height: 50%;
+	margin-top: 100px;
+}
