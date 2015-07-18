@@ -53,6 +53,7 @@
     });
 
     router.start();
+    document.querySelector('#init-toggle').addEventListener('toggle', initRoute);
 
     /* --------------------------------- Event Registration -------------------------------- */
 
@@ -74,6 +75,10 @@
 
         map.setView(new L.LatLng(43.069452, -89.411373), 11);
         map.addLayer(osm);
+    }
+
+    function initRoute(){
+        alert("Recorrido iniciado");
     }
 
 }());
