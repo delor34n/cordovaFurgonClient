@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <link href="assets/ratchet/css/ratchet.css" rel="stylesheet">
+    <link href="assets/ratchet/css/ratchet.css" rel="stylesheet">    
     <link href="assets/css/pageslider.css" rel="stylesheet">
     <link href="assets/css/leaflet.css" rel="stylesheet"/>
     <link href="assets/css/styles.css" rel="stylesheet">
@@ -42,12 +42,14 @@
     </script>
 
     <script id="home-tpl" type="text/template">
-        <div class="toggle active">
-            <div class="toggle-handle"></div>
-        </div>
-        <div class="toggle">
-            <div class="toggle-handle"></div>
-        </div>
+        <ul class="table-view">
+            <li class="table-view-cell">
+                Item 1
+                <div class="toggle active">
+                    <div class="toggle-handle"></div>
+                </div>
+            </li>
+        </ul>
     </script>
 
     <script id="news-tpl" type="text/template">
@@ -64,6 +66,7 @@
     <script src="lib/router.js"></script>
     <script src="lib/handlebars.js"></script>
     <script src="lib/fastclick.js"></script>
+    <script src="assets/ratchet/js/ratchet.min.js"></script>
 
     <script src="js/HeaderView.js"></script>
     <script src="js/FooterView.js"></script>

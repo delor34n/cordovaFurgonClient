@@ -45,6 +45,7 @@
         $('a.active').removeClass('active');
         $('span.icon-gear').parent().addClass('active');
     });
+
     router.start();
 
     /* --------------------------------- Event Registration -------------------------------- */
