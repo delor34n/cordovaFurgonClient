@@ -2,24 +2,48 @@
 (function () {
 
     /* ---------------------------------- Local Variables ---------------------------------- */
-    HomeView.prototype.template = Handlebars.compile($("#home-tpl").html());
-    MapView.prototype.template = Handlebars.compile($("#map-tpl").html());
     HeaderView.prototype.template = Handlebars.compile($("#header-tpl").html());
     FooterView.prototype.template = Handlebars.compile($("#footer-tpl").html());
 
-    $('body').html(new HeaderView().render().$el);
-    $('body').append(new FooterView().render().$el);
+    HomeView.prototype.template = Handlebars.compile($("#home-tpl").html());
+    MapView.prototype.template = Handlebars.compile($("#map-tpl").html());
+    NewsView.prototype.template = Handlebars.compile($("#news-tpl").html());
+    SettingsView.prototype.template = Handlebars.compile($("#settings-tpl").html());
 
     router.addRoute('', function() {
+        $('body').html(new HeaderView().render().$el);
+        $('body').append(new FooterView().render().$el);
+
         $('body').append(new HomeView().render().$el);
         $('a.active').removeClass('active');
         $('span.icon-home').parent().addClass('active');
     });
 
     router.addRoute('map', function() {
+        $('body').html(new HeaderView().render().$el);
+        $('body').append(new FooterView().render().$el);
+        
         $('body').append(new MapView().render().$el);
         $('a.active').removeClass('active');
         $('span.icon-search').parent().addClass('active');
+    });
+
+    router.addRoute('news', function() {
+        $('body').html(new HeaderView().render().$el);
+        $('body').append(new FooterView().render().$el);
+        
+        $('body').append(new NewsView().render().$el);
+        $('a.active').removeClass('active');
+        $('span.icon-info').parent().addClass('active');
+    });
+
+    router.addRoute('settings', function() {
+        $('body').html(new HeaderView().render().$el);
+        $('body').append(new FooterView().render().$el);
+        
+        $('body').append(new SettingsView().render().$el);
+        $('a.active').removeClass('active');
+        $('span.icon-gear').parent().addClass('active');
     });
     router.start();
 

@@ -26,11 +26,11 @@
                 <span class="icon icon-search"></span>
                 <span class="tab-label">Mapa</span>
             </a>
-            <a class="tab-item" href="#">
+            <a class="tab-item" href="#news">
                 <span class="icon icon-info"></span>
                 <span class="tab-label">Notificaciones</span>
             </a>
-            <a class="tab-item" href="#">
+            <a class="tab-item" href="#settings">
                 <span class="icon icon-gear"></span>
                 <span class="tab-label">Opciones</span>
             </a>
@@ -42,14 +42,20 @@
     </script>
 
     <script id="home-tpl" type="text/template">
-        <div class="content">
-            <div class="toggle active">
-                <div class="toggle-handle"></div>
-            </div>
-            <div class="toggle">
-                <div class="toggle-handle"></div>
-            </div>
+        <div class="toggle active">
+            <div class="toggle-handle"></div>
         </div>
+        <div class="toggle">
+            <div class="toggle-handle"></div>
+        </div>
+    </script>
+
+    <script id="news-tpl" type="text/template">
+        <div id="news"></div>
+    </script>
+
+    <script id="settings-tpl" type="text/template">
+        <div id="settings"></div>
     </script>
 
     <script src="cordova.js"></script>
@@ -58,10 +64,14 @@
     <script src="lib/router.js"></script>
     <script src="lib/handlebars.js"></script>
     <script src="lib/fastclick.js"></script>
+
     <script src="js/HeaderView.js"></script>
+    <script src="js/FooterView.js"></script>
     <script src="js/HomeView.js"></script>
     <script src="js/MapView.js"></script>
-    <script src="js/FooterView.js"></script>
+    <script src="js/NewsView.js"></script>
+    <script src="js/SettingsView.js"></script>
+
     <script src="js/app.js"></script>
 
 </body>
