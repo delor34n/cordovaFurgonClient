@@ -1,7 +1,7 @@
-var MapView = function() {
+var HeaderView = function() {
 
 	this.initialize = function() {
-		this.$el = $('<div class="content"></div>');
+		this.$el = $('<div class="header"></div>');
   		this.$el.html(this.template());
   	};
 

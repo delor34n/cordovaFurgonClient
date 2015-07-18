@@ -1,7 +1,7 @@
-var MapView = function() {
+var FooterView = function() {
 
 	this.initialize = function() {
-		this.$el = $('<div class="content"></div>');
+		this.$el = $('<div class="footer"></div>');
   		this.$el.html(this.template());
   	};
 

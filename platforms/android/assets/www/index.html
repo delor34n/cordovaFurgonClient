@@ -10,13 +10,15 @@
 </head>
 <body>
 
-    <script id="map-tpl" type="text/template">
+    <script id="header-tpl" type="text/template">
         <header class="bar bar-nav">
             <h1 class="title">FurgonClient - FurgonTrack</h1>
         </header>
+    </script>
 
+    <script id="footer-tpl" type="text/template">
         <nav class="bar bar-tab">
-            <a class="tab-item active" href="">
+            <a class="tab-item active" href="#">
                 <span class="icon icon-home"></span>
                 <span class="tab-label">Inicio</span>
             </a>
@@ -33,32 +35,13 @@
                 <span class="tab-label">Opciones</span>
             </a>
         </nav>
-        <div id="map" class="content"></div>
+    </script>
+
+    <script id="map-tpl" type="text/template">
+        <div id="map"></div>
     </script>
 
     <script id="home-tpl" type="text/template">
-        <header class="bar bar-nav">
-            <h1 class="title">FurgonClient - FurgonTrack</h1>
-        </header>
-
-        <nav class="bar bar-tab">
-            <a class="tab-item active" href="">
-                <span class="icon icon-home"></span>
-                <span class="tab-label">Inicio</span>
-            </a>
-            <a class="tab-item" href="#map">
-                <span class="icon icon-search"></span>
-                <span class="tab-label">Mapa</span>
-            </a>
-            <a class="tab-item" href="#">
-                <span class="icon icon-info"></span>
-                <span class="tab-label">Notificaciones</span>
-            </a>
-            <a class="tab-item" href="#">
-                <span class="icon icon-gear"></span>
-                <span class="tab-label">Opciones</span>
-            </a>
-        </nav>
         <div class="content">
             <div class="toggle active">
                 <div class="toggle-handle"></div>
@@ -75,8 +58,10 @@
     <script src="lib/router.js"></script>
     <script src="lib/handlebars.js"></script>
     <script src="lib/fastclick.js"></script>
+    <script src="js/HeaderView.js"></script>
     <script src="js/HomeView.js"></script>
     <script src="js/MapView.js"></script>
+    <script src="js/FooterView.js"></script>
     <script src="js/app.js"></script>
 
 </body>
