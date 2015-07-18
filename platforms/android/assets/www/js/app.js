@@ -3,9 +3,14 @@
 
     /* ---------------------------------- Local Variables ---------------------------------- */
     HomeView.prototype.template = Handlebars.compile($("#home-tpl").html());
+    MapView.prototype.template = Handlebars.compile($("#map-tpl").html());
 
     router.addRoute('', function() {
         $('body').html(new HomeView().render().$el);
+    });
+
+    router.addRoute('map/', function() {
+        $('body').html(new MapView().render().$el);
     });
     router.start();
 

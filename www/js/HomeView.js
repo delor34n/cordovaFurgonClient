@@ -1,7 +1,7 @@
 var HomeView = function (service) {
 
     this.initialize = function () {
-        this.$el = $('<div/>');
+        this.$el = $('<div class="content"></div>');
         this.render();
     };
 

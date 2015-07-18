@@ -10,36 +10,46 @@
 </head>
 <body>
 
-    <script id="home-tpl" type="text/template">
+    <script id="header-tpl" type="text/template">
         <header class="bar bar-nav">
             <h1 class="title">FurgonClient - FurgonTrack</h1>
         </header>
+    </script>
 
-        <div id="map" class="content"></div>
-
+    <script id="footer-tpl" type="text/template">
         <nav class="bar bar-tab">
-            <a class="tab-item active" href="#">
+            <a class="tab-item active" href="">
                 <span class="icon icon-home"></span>
-                <span class="tab-label">Home</span>
+                <span class="tab-label">Inicio</span>
             </a>
-            <a class="tab-item" href="#">
-                <span class="icon icon-person"></span>
-                <span class="tab-label">Profile</span>
-            </a>
-            <a class="tab-item" href="#">
-                <span class="icon icon-star-filled"></span>
-                <span class="tab-label">Favorites</span>
-            </a>
-            <a class="tab-item" href="#">
+            <a class="tab-item" href="#map">
                 <span class="icon icon-search"></span>
-                <span class="tab-label">Search</span>
+                <span class="tab-label">Mapa</span>
+            </a>
+            <a class="tab-item" href="#">
+                <span class="icon icon-info"></span>
+                <span class="tab-label">Notificaciones</span>
             </a>
             <a class="tab-item" href="#">
                 <span class="icon icon-gear"></span>
-                <span class="tab-label">Settings</span>
+                <span class="tab-label">Opciones</span>
             </a>
         </nav>
+    </script>
 
+    <script id="map-tpl" type="text/template">
+        <div id="map"></div>
+    </script>
+
+    <script id="home-tpl" type="text/template">
+        <div class="content">
+            <div class="toggle active">
+                <div class="toggle-handle"></div>
+            </div>
+            <div class="toggle">
+                <div class="toggle-handle"></div>
+            </div>
+        </div>
     </script>
 
     <script src="cordova.js"></script>
@@ -48,7 +58,10 @@
     <script src="lib/router.js"></script>
     <script src="lib/handlebars.js"></script>
     <script src="lib/fastclick.js"></script>
+    <script src="js/HeaderView.js"></script>
     <script src="js/HomeView.js"></script>
+    <script src="js/MapView.js"></script>
+    <script src="js/FooterView.js"></script>
     <script src="js/app.js"></script>
 
 </body>
